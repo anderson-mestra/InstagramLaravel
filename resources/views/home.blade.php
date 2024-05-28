@@ -5,5 +5,6 @@ Inicio
 @endsection
 
 @section('contenido')
+
     
 @endsection

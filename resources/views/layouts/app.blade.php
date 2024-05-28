@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MyStagram - @yield('titulo')</title>
+    <title href="<?= url('/') ?>">MyStagram - @yield('titulo')</title>
 
     <!-- Se toma el archivo css con las configuraciones de tailwind -->
     @vite('resources/css/app.css')
@@ -15,12 +15,12 @@
         <div class="container mx-auto flex justify-between items-center">
 
             <h1 class="text-3xl font-black">
-                MyStagram
+                <a href="<?= url('/') ?>">MyStagram</a>
             </h1>
 
             <nav class="flex gap-2 items-center">
                 <a class="font-bold uppercase text-gray-600 text-sm" href="<?= url('/') ?>">Login</a>
-                <a class="font-bold uppercase text-gray-600 text-sm" href="<?= url('/nosotros') ?>">Sign Up</a>
+                <a class="font-bold uppercase text-gray-600 text-sm" href="<?= url('/crear-cuenta') ?>">Crea una cuenta</a>
             </nav>
         </div>
     </header>
@@ -32,7 +32,7 @@
         @yield('contenido')
     </main>
 
-    <footer class="text-center p-5 text text-gray-500 font-bold uppercase">
+    <footer class="mt-10 text-center p-5 text text-gray-500 font-bold uppercase">
         MyStagram - Todos los derechos reservados {{ now()->year }}
     </footer>
 </body>
