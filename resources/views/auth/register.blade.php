@@ -31,7 +31,7 @@
                 <div class="mb-5">
                     <label for="username" class="mb-2 block uppercase text-gray-500 font-bold">Username</label>
                     <input id="username" name="username" type="text" placeholder="Tu nombre de usuario"
-                        class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                        class="border p-3 w-full rounded-lg @error('username') border-red-500 @enderror"
                         value="{{ old('username') }}">
                         @error('username')
                             {{-- En caso que haya un error en el parametro que se mando el controllador generera lo que este dentro de la directiva --}}
@@ -44,7 +44,7 @@
                 <div class="mb-5">
                     <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">Email</label>
                     <input id="email" name="email" type="text" placeholder="Tu email de registro"
-                        class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                        class="border p-3 w-full rounded-lg @error('email') border-red-500 @enderror"
                         value="{{ old('email') }}">
                         @error('email')
                             {{-- En caso que haya un error en el parametro que se mando el controllador generera lo que este dentro de la directiva --}}
@@ -57,7 +57,7 @@
                 <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">Contraseña</label>
                     <input id="password" name="password" type="password" placeholder="Escribe tu contraseña"
-                        class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror">
+                        class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror">
                         @error('password')
                             {{-- En caso que haya un error en el parametro que se mando el controllador generera lo que este dentro de la directiva --}}
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
@@ -71,13 +71,7 @@
                     <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold">Repite tu
                         contraseña</label>
                     <input id="password_confirmation" name="password_confirmation" type="password"
-                        placeholder="Repite tu contraseña" class="border p-3 w-full rounded-lg">
-                        @error('password_confirmation')
-                            {{-- En caso que haya un error en el parametro que se mando el controllador generera lo que este dentro de la directiva --}}
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
-                                Las contraseña no coinciden
-                            </p>
-                        @enderror
+                        placeholder="Repite tu contraseña" class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror">
                 </div>
 
                 <input type="submit" value="Crear Cuenta"
